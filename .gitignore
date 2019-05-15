@@ -26,7 +26,6 @@ package-lock.json
 .firebase
 .firebaserc
 #submodule
-packages/reusecore
 .cache/
 now.json
 firebase.json

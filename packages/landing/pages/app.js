@@ -62,10 +62,8 @@ export default () => {
             rel="stylesheet"
           />
         </Head>
-
         <ResetCSS />
         <GlobalStyle />
-
         <AppWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
