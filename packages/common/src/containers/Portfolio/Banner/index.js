@@ -47,7 +47,7 @@ const BannerSection = ({
             <SocialProfile items={SOCIAL_PROFILES} />
           </Box>
           <Box {...imageArea} className="image_area">
-            <Image src={PersonImage} alt="Mat Helme" />
+            {/*<Image src={PersonImage} alt="Mat Helme" />*/}
           </Box>
         </Box>
       </Container>

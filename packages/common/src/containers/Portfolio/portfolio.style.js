@@ -195,7 +195,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #fff;
+            color: black;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
@@ -207,7 +207,7 @@ export const ContentWrapper = styled.div`
           padding: 5px;
           font-size: 16px;
           font-weight: 700;
-          color: #fff;
+          color: black;
           position: relative;
           font-family: 'Raleway', sans-serif;
           transition: 0.15s ease-in-out;
@@ -224,7 +224,8 @@ export const ContentWrapper = styled.div`
             position: absolute;
             width: calc(100% - 8px);
             height: 11px;
-            background: #3444f1;
+            // background: #3444f1;
+            background: #99a1fa;
             bottom: 6px;
             left: 0;
             z-index: -1;

@@ -13,7 +13,7 @@ import { DrawerContext } from '../../../contexts/DrawerContext';
 import { MENU_ITEMS } from '../../../data/Portfolio/data';
 import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
 
-import LogoImage from '../../../assets/image/portfolio/logo.png';
+import LogoImage from '../../../assets/image/portfolio/dark_logo_transparent.png';
 import LogoImageAlt from '../../../assets/image/portfolio/logo-alt.png';
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
