@@ -24,7 +24,8 @@ var chartData = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [65, 59, 80, 81, 56, 55, 40]
+      // data: [65, 59, 80, 81, 56, 55, 40]
+      data: [0, 0, 0, 0, 0, 0, 0]
     },
     {
       label: "My Second dataset",
@@ -34,7 +35,8 @@ var chartData = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [28, 48, 40, 19, 86, 27, 90]
+      //data: [28, 48, 40, 19, 86, 27, 90]
+      data: [0, 0, 0, 0, 0, 0, 0]
     }
   ]
 };
@@ -77,17 +79,56 @@ var chartOptions={
   datasetStroke : true,
 
   //Number - Pixel width of dataset stroke
-  datasetStrokeWidth : 2,
+  datasetStrokeWidth : 10,
 
-  //Boolean - Whether to fill the dataset with a colour
-  datasetFill : true,
+  //Boolean - Whether to fill the dataset with a color
+  datasetFill : false,
 // {% raw %}
 //String - A legend template
 legendTemplate : "<ul className=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
 // {% endraw %}
 
 //Boolean - Whether to horizontally center the label and point dot inside the grid
-offsetGridLines : false
+offsetGridLines : false,
+
+
+
+
+scales: {
+  xAxes: [
+    {
+      ticks: {
+        callback: function(label, index, labels) {
+          return label.toFixed(2) + "%";
+        }
+      }
+    }
+  ],
+    yAxes: [
+    {
+      ticks: {
+        callback: function(label, index, labels) {
+          return label;
+        },
+        fontSize: 18,
+        fontColor: 'black'
+      },
+      display: true,
+    }
+  ]
+}
+
+
+  // scales: {
+  //   labelString:"jkjkk",
+  //   display: true
+    // yAxes: [{
+    //   display: false
+    // }],
+    // xAxes: [{
+    //   display: true
+    // }]
+ // }
 };
 //
 // var MyComponent = React.createClass({
