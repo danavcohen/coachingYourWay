@@ -62,10 +62,10 @@ var chartOptions={
   pointDot : true,
 
   //Number - Radius of each point dot in pixels
-  pointDotRadius : 13,
+  pointDotRadius : 6,
 
   //Number - Pixel width of point dot stroke
-  pointDotStrokeWidth : 1,
+  pointDotStrokeWidth : 2,
 
   //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
   pointHitDetectionRadius : 20,
@@ -74,7 +74,7 @@ var chartOptions={
   datasetStroke : true,
 
   //Number - Pixel width of dataset stroke
-  datasetStrokeWidth : 25,
+  datasetStrokeWidth : 8,
 
   //Boolean - Whether to fill the dataset with a color
   datasetFill : false,
@@ -122,9 +122,9 @@ localData;
           {
             label: "My Second dataset",
             fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
+            strokeColor: "#373cff",
             // pointColor: "rgba(151,187,205,1)",
-            pointColor: "white",
+            pointColor: "#fff",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
