@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Box from "../Banner";
 const charStyle = {
-  height: "100%",
-  marginTop: "10%"
+  height: "62vh%",
+  marginTop: "auto"
 }
 var LineChart = require("react-chartjs").Line;
 var count=0;
@@ -140,7 +140,7 @@ localData;
   render() {
     return(
     <div style={charStyle}>
-      <LineChart data={this.state.chartData} options={chartOptions} width="670" height="600"/>
+      <LineChart data={this.state.chartData} options={chartOptions} width="300" height="300"/>
     </div>
   );
   }

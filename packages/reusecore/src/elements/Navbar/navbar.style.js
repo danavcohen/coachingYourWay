@@ -17,7 +17,7 @@ const NavbarStyle = styled.nav`
   /* Navbar default style goes here */
   display: flex;
   align-items: center;
-  min-height: 56px;
+  height: 20vh;
   padding: 10px 16px;
   
   /* Style system supported prop */
@@ -33,7 +33,7 @@ const NavbarStyle = styled.nav`
   ${boxShadow}
   ${borderRadius}
 `;
-
+// min-height: 56px;
 NavbarStyle.displayName = 'NavbarStyle';
 
 export default NavbarStyle;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SocialProfileWrapper = styled.div`
-margin-left: auto;
+margin-right: auto;
   position: relative;
   display: flex;
   align-items: center;

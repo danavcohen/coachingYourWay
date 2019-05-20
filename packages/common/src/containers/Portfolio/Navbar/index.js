@@ -15,7 +15,9 @@ import ScrollSpyMenu from '../../../components/ScrollSpyMenu';
 
 import LogoImage from '../../../assets/image/portfolio/dark_logo_transparent.png';
 import LogoImageAlt from '../../../assets/image/portfolio/logo-alt.png';
-
+const consStyle={
+  // height:"20vh",
+}
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
 
@@ -28,7 +30,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 
   return (
     <NavbarWrapper {...navbarStyle} className="portfolio_navbar">
-      <Container noGutter mobileGutter width="1200px">
+      <Container noGutter mobileGutter width="1200px" style={consStyle}>
         <Box {...row}>
           <Logo
             href="#"
