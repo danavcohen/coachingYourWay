@@ -27,9 +27,10 @@ export default () => {
     <ThemeProvider theme={portfolioTheme}>
       <Fragment>
         <Head>
-          <title>Portfolio | A react next landing page</title>
-          <meta name="Description" content="React next landing page" />
+          <title>יוסי שוע מאמן אישי</title>
+          <meta name="Description" content="יוסי שוע מאמן אישי" />
           <meta name="theme-color" content="#ec5555" />
+          <meta name="keywords" content="יוסי שוע,CSS,קואצינג,מאמן אישי,coaching,yossi shoa,קואצ'ר,קואצר,coaching your way,coachingYourWay,קואצ'ינג"/>
           {/* Load google fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800|Roboto:300,400,400i,500,700,900"

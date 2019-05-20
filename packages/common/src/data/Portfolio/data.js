@@ -61,22 +61,22 @@ export const SOCIAL_PROFILES = [
 
 export const MENU_ITEMS = [
   {
-    label: 'ME',
+    label: 'מאמן אישי',
     path: '#banner_section',
     offset: '0',
   },
   {
-    label: 'PROJECT',
+    label: 'סרטונים',
     path: '#portfolio_section',
     offset: '0',
   },
   {
-    label: 'AWARDS',
+    label: 'צור קשר',
     path: '#awards_section',
     offset: '0',
   },
   {
-    label: 'WHY ME?',
+    label: 'עלי',
     path: '#process_section',
     offset: '0',
   },

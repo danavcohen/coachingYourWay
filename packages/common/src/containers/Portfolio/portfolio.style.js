@@ -205,14 +205,14 @@ export const ContentWrapper = styled.div`
         }
         a {
           padding: 5px;
-          font-size: 16px;
+          font-size: 20px;
           font-weight: 700;
           color: black;
           position: relative;
           font-family: 'Raleway', sans-serif;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #fff;
+            color: black;
             &:after {
               transform: scaleX(1);
               transform-origin: left center 0;
