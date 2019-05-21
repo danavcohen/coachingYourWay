@@ -17,7 +17,6 @@ const NavbarStyle = styled.nav`
   /* Navbar default style goes here */
   display: flex;
   align-items: center;
-  height: 20vh;
   padding: 10px 16px;
   
   /* Style system supported prop */

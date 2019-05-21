@@ -4,10 +4,10 @@ import Heading from "reusecore/src/elements/Heading";
 import Icon from "react-icons-kit";
 import { cornerDownRight } from "react-icons-kit/feather/cornerDownRight";
 const mainHeader = {
-  width: "100%",
   textAlign: "center",
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  marginTop: "10vh"
   // marginBottom: "auto",
 };
 const childHeader = {

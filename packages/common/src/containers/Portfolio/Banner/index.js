@@ -12,7 +12,7 @@ import Chart from "../Chart";
 import MainHead from "../MainHead";
 import { SOCIAL_PROFILES } from "../../../data/Portfolio/data";
 import { cornerDownRight } from "react-icons-kit/feather/cornerDownRight";
-import PersonImage from "../../../assets/image/portfolio/temp.png";
+import PersonImage from "../../../assets/image/portfolio/yossiTry.png";
 
 const imgShare = {
   marginLeft: "auto",
@@ -21,10 +21,13 @@ const imgShare = {
 
 const mainBox = {
   marginTop: "auto",
-  height: "80vh"
+  height: "80vh",
+  position: "relative",
 };
 const imgPerson = {
-  maxHeight: "62vh",
+  marginLeft:"auto",
+  height: "74vh",
+  width: "74vh",
 };
 const containerStyle = {
   height: "80vh"
@@ -45,14 +48,19 @@ const BannerSection = ({
     <BannerWrapper id="banner_section">
       <Container noGutter mobileGutter width="1200px">
         <Box {...row} style={mainBox}>
+          <div style={{width:'50%'}}>
           <MainHead/>
-          <Chart style={{width:"50%"}}/>
+            <Chart/>
+          <SocialProfile items={SOCIAL_PROFILES} style={{marginTop:'51vh',marginLeft: 'auto'}}/>
+          </div>
           <Box {...contentArea} style={imgShare}>
             {/*<Heading content="Hello, I’m" {...greetingStyle} />*/}
             {/*<Heading content="Visual System Designer my" {...designationStyle} />*/}
+
             <Box {...imageArea} className="image_area" style={{ marginTop: "auto"}}>
               <Image src={PersonImage} alt="Mat Helme" style={imgPerson}/>
             </Box>
+
             {/*<Box {...roleWrapper}>*/}
             {/*<Icon*/}
             {/*icon={cornerDownRight}*/}
@@ -66,8 +74,11 @@ const BannerSection = ({
             {/*content="Focused on defining principle driven visual systems that scale to global products and brands. Lately, I've been putting a lot of thought into personalized illustrative languages and getting machines to draw."*/}
             {/*{...aboutStyle}*/}
             {/*/>*/}
-            <SocialProfile items={SOCIAL_PROFILES}/>
+
           </Box>
+
+
+
 
           {/*<Box {...imageArea} className="image_area">*/}
           {/*<Image src={PersonImage} alt="Mat Helme" />*/}

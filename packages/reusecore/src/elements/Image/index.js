@@ -6,8 +6,8 @@ import { base, themed } from '../base';
 const ImageWrapper = styled('img')(
   {
     display: 'block',
-    maxWidth: '100%',
-    height: 'auto'
+    height: 'auto',
+    width: 'auto'
   },
   base,
   themed('Image')

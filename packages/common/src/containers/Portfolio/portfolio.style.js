@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Roboto', sans-serif;
   }
-
   h1,
   h2,
   h3,
@@ -46,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
             margin-bottom: 25px;
           }
           a{
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 500;
             color: #343d48;
             position: relative;

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Box from "../Banner";
 const charStyle = {
-  height: "62vh%",
-  marginTop: "auto"
+  position: "absolute", bottom:"6%",left:"0",height:"auto",zIndex:"1"
 }
 var LineChart = require("react-chartjs").Line;
 var count=0;
@@ -62,10 +61,10 @@ var chartOptions={
   pointDot : true,
 
   //Number - Radius of each point dot in pixels
-  pointDotRadius : 6,
+  pointDotRadius : 10,
 
   //Number - Pixel width of point dot stroke
-  pointDotStrokeWidth : 2,
+  pointDotStrokeWidth : 8,
 
   //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
   pointHitDetectionRadius : 20,
@@ -80,12 +79,12 @@ var chartOptions={
   datasetFill : false,
 // {% raw %}
 //String - A legend template
-//   legendTemplate : '<ul className=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>',
-  legendTemplate : '',
+   legendTemplate : '<ul className=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>',
+//  legendTemplate : '',
   scaleLineColor: 'transparent',
   showScale: false,
-  showTooltips: false,
-  responsive: false,
+  //showTooltips: false,
+  //responsive: false,
   //maintainAspectRatio: true,
 // {% endraw %}
 
@@ -112,11 +111,11 @@ class Chart extends Component{
 
 localData;
   constructor(props) {
-    super(props);
+          super(props);
     this.refresh=this.refresh.bind(this);
-    this.state = {
-       chartData : {
-        labels: ["April", "May", "June", "July"],
+    this.state = {width: 1000, height: 470,
+      chartData : {
+        labels: ["April", "May", "June", "July","stam","stam"],
         datasets: [
 
           {
@@ -124,53 +123,66 @@ localData;
             fillColor: "rgba(151,187,205,0.2)",
             strokeColor: "#373cff",
             // pointColor: "rgba(151,187,205,1)",
-            pointColor: "#fff",
-            pointStrokeColor: "#fff",
+            pointBorderColor: "#373cff",
+            pointColor: "white",
+            pointStrokeColor: "#373cff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [ 1, 3, 12, 24]
+            data: [ 1, 3, 15, 18,25,35]
           }
         ]
       }
     };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
+  }
+  updateWindowDimensions(){
+    var width = parseInt(window.innerWidth*(70/100));
+    var height= parseInt(window.innerHeight*(70/100));
+    this.setState({ width:width, height: height });
+    console.log(window.innerHeight,window.innerWidth);
+    console.log(height,width);
   }
   componentDidMount() {
     setInterval(this.refresh, 3000);
+    this.updateWindowDimensions();
   }
   render() {
     return(
     <div style={charStyle}>
-      <LineChart data={this.state.chartData} options={chartOptions} width="300" height="300"/>
+      <LineChart data={this.state.chartData} options={chartOptions} width={this.state.width} height={this.state.height} redraw/>
     </div>
   );
   }
 
   refresh() {
-    if(count%2==0){
-    this.localData = [ 1, 3, 12, 24];
-  }
-    else{
-      this.localData=[ 1, 3, 12, 24];
-    }
-    this.setState({
-      chartData : {
-        labels: ["April", "May", "June", "July"],
-        datasets: [
-          {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-
-            data: this.localData
-          }
-        ]
-      }
-    });
-    count++;
+  //   if(count%2==0){
+  //     this.state.height = 500;
+  //     console.log(this.state.height);
+  //   this.localData = [ 1, 3, 12, 24];
+  // }
+  //   else{
+  //     this.localData=[ 1, 3, 12, 24];
+  //   }
+  //   this.setState({
+  //     chartData : {
+  //       labels: ["April", "May", "June", "July"],
+  //       datasets: [
+  //         {
+  //           label: "My Second dataset",
+  //           fillColor: "rgba(151,187,205,0.2)",
+  //           strokeColor: "rgba(151,187,205,1)",
+  //           pointColor: "rgba(151,187,205,1)",
+  //           pointStrokeColor: "#fff",
+  //           pointHighlightFill: "#fff",
+  //           pointHighlightStroke: "rgba(151,187,205,1)",
+  //
+  //           data: this.localData
+  //         }
+  //       ]
+  //     }
+  //   });
+  //   count++;
   }
 
 }

@@ -54,7 +54,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
             />
             <Link href="#">
               <a className="navbar_button">
-                <Button {...button} title="LET'S TALK" />
+                <Button {...button} title="LET'S TALK" style={{fontSize: "20px"}}/>
               </a>
             </Link>
             <Drawer
