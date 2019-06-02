@@ -28,9 +28,10 @@ export default () => {
       <Fragment>
         <Head>
           <title>יוסי שוע מאמן אישי</title>
+          <meta charSet="UTF-8"/>
           <meta name="Description" content="יוסי שוע מאמן אישי" />
           <meta name="theme-color" content="#ec5555" />
-          <meta name="keywords" content="יוסי שוע,CSS,קואצינג,מאמן אישי,coaching,yossi shoa,קואצ'ר,קואצר,coaching your way,coachingYourWay,קואצ'ינג"/>
+          <meta name="keywords" content="יוסי שוע,קואצינג,מאמן אישי,coaching,yossi shoa,קואצ'ר,קואצר,coaching your way,coachingYourWay,קואצ'ינג"/>
           {/* Load google fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700,800|Roboto:300,400,400i,500,700,900"

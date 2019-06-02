@@ -46,7 +46,7 @@
 		"install-deps": "cd \"dist/functions\" && yarn",
 		"pregatsby-firebase-serve": "rimraf dist && yarn run gatsby-build && cpx \"packages/landing-gatsby/public/**/*.*\" \"dist/public\" -C",
 		"gatsby-firebase-serve": "cross-env NODE_ENV=production firebase serve",
-		"pregatsby-firebase-deploy": "rimraf dist && yarn run gatsby-build && cpx \"packages/landing-gatsby/public/**/*.*\" \"dist/public\" -C",
+		"pregatsby-firyarn global add firebase-toolsebase-deploy": "rimraf dist && yarn run gatsby-build && cpx \"packages/landing-gatsby/public/**/*.*\" \"dist/public\" -C",
 		"gatsby-firebase-deploy": "firebase deploy",
 		"netlify-deploy": "ÿarn workspace next-landing run netlify-build"
 	},
@@ -63,6 +63,8 @@
 	},
 	"dependencies": {
 		"chart.js": "1.1.1",
+		"firebase-admin": "5.4.0",
+		"firebase-functions": "0.7.0",
 		"react": "^16.8.6",
 		"react-chartjs": "^1.2.0",
 		"react-dom": "^16.8.6"
