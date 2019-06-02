@@ -8,8 +8,8 @@ const charStyle = {
   left: "0",
   // height:"auto",
   zIndex: "1",
-  width: "50vh",
-  height: "50vh"
+  width: "80vw",
+  height: "60vh"
 };
 //var LineChart = require("react-chartjs").Line;
 
@@ -32,19 +32,19 @@ class Chart2 extends Component {
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(151,187,205,0.2)',
-            borderColor: 'rgba(151,187,205,0.2)',
+            borderColor: '#373cff',
             //borderCapStyle: 'butt',
             borderDash: [],
             borderDashOffset: 0.0,
             //borderJoinStyle: 'miter',
-            pointBorderColor: 'white',
+            pointBorderColor: '#373cff',
             pointBackgroundColor: '#fff',
-            pointBorderWidth: 1,
+            pointBorderWidth: 3,
             pointHoverRadius: 5,
             pointHoverBackgroundColor: 'rgba(75,192,192,1)',
             pointHoverBorderColor: 'rgba(220,220,220,1)',
             pointHoverBorderWidth: 2,
-            pointRadius: 1,
+            pointRadius: 5,
             pointHitRadius: 10,
             data: [65, 59, 80, 81, 56, 55, 40]
           }
@@ -140,7 +140,7 @@ class Chart2 extends Component {
     return (
       <div style={charStyle}>
         <div style={{position:"relative"}}>
-          <div style={{height:"50vh",width:"30wh"}}>
+          <div style={{height:"60vh",width:"80vw"}}>
         <Line data={this.state.chartData} options={this.state.options}/>
         </div>
         </div>
