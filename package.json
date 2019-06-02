@@ -27,6 +27,7 @@
 		"packages/reusecore"
 	],
 	"scripts": {
+		"dev": "nodemon -w server.js server.js",
 		"clean": "lerna clean --yes && rimraf node_modules",
 		"gatsby-dev": "yarn workspace gatsby-landing run dev",
 		"gatsby-build": "yarn workspace gatsby-landing run build",
@@ -62,11 +63,11 @@
 		]
 	},
 	"dependencies": {
-		"chart.js": "1.1.1",
+		"chart.js": "^2.8.0",
 		"firebase-admin": "5.4.0",
 		"firebase-functions": "0.7.0",
 		"react": "^16.8.6",
-		"react-chartjs": "^1.2.0",
+		"react-chartjs-2": "^2.7.6",
 		"react-dom": "^16.8.6"
 	}
 }

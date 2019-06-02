@@ -8,7 +8,7 @@ import Image from "reusecore/src/elements/Image";
 import Container from "../../../components/UI/Container";
 import SocialProfile from "../SocialProfile";
 import BannerWrapper from "./banner.style";
-import Chart from "../Chart";
+import Chart2 from "../Chart2";
 import MainHead from "../MainHead";
 import { SOCIAL_PROFILES } from "../../../data/Portfolio/data";
 import { cornerDownRight } from "react-icons-kit/feather/cornerDownRight";
@@ -50,7 +50,7 @@ const BannerSection = ({
         <Box {...row} style={mainBox}>
           <div style={{width:'50%'}}>
           <MainHead/>
-            <Chart/>
+            <Chart2/>
           <SocialProfile items={SOCIAL_PROFILES} style={{marginTop:'51vh',marginLeft: 'auto'}}/>
           </div>
           <Box {...contentArea} style={imgShare}>
